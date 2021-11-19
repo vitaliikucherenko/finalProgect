@@ -55,7 +55,7 @@ public class FinalTestMain extends BaseTest {
     @Test(invocationCount = 2,groups = "validation")
     public void verificationOfGoodInBasket() {
         basketPopUp.selectSection();
-        SelenideElement good1 = $(By.xpath("//span[@class = 'goods-tile__title' and text() =' Компьютер Cobra I11.8.H1S2.165.101 ']")).should(Condition.exist);
+        SelenideElement good1 = $(By.xpath("//span[@class = 'goods-tile__title' and text() =' Компьютер Cobra I11.8.H1S2.165.101 ']")).should(Condition.visible);
         String text = good1.getText().trim();
         good1.click();
         basketPopUp.addToBasket(text);
@@ -64,7 +64,7 @@ public class FinalTestMain extends BaseTest {
     @Test(groups = "validation")
     public void removeFromBasket() {
         basketPopUp.selectSection();
-        SelenideElement good1 = $(By.xpath("//span[@class = 'goods-tile__title' and text() =' Компьютер Cobra I11.8.H1S2.165.101 ']")).should(Condition.exist);
+        SelenideElement good1 = $(By.xpath("//span[@class = 'goods-tile__title' and text() =' Компьютер Cobra I11.8.H1S2.165.101 ']")).should(Condition.visible);
         String text = good1.getText().trim();
         good1.click();
         basketPopUp.addToBasket(text);
