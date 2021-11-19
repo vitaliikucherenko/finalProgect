@@ -1,5 +1,6 @@
 package com.nixsolutions.uiTests.configBaseTest;
 
+import com.codeborne.selenide.Configuration;
 import com.nixsolutions.app.Browser;
 import com.nixsolutions.uiTests.metodsViewResult.TakeScreenshot;
 import org.testng.ITestResult;
@@ -19,6 +20,7 @@ public class BaseTest {
     @BeforeMethod(groups = {"authentication", "validation"})
     public void start() {
         browser.getBrowserType();
+        Configuration.startMaximized = true;
         open("https://rozetka.com.ua/");
     }
 
