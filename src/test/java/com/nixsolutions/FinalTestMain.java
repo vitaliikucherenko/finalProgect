@@ -22,12 +22,12 @@ public class FinalTestMain extends BaseTest {
         logInPopUp.LogIn(login, password);
     }
 
-    @Test (groups = "authentication")
+    @Test(groups = "authentication")
     public void verificationTitleOfLogInFields() {
         logInPopUp.titleOfLoginFields();
     }
 
-    @Test (groups = "authentication")
+    @Test(groups = "authentication")
     public void validationLogInPopUpLoginField() {
         logInPopUp.validationLoginField();
     }
@@ -52,13 +52,9 @@ public class FinalTestMain extends BaseTest {
         logInPopUp.validationOfRegisterFields();
     }
 
-    @Test(invocationCount = 2,groups = "validation")
+    @Test(invocationCount = 2, groups = "validation")
     public void verificationOfGoodInBasket() {
-        //basketPopUp.selectSection();
-        SelenideElement el1 = $(By.xpath("//a[@class = 'menu-categories__link' and text() = 'Ноутбуки и компьютеры']")).should(Condition.visible);
-        el1.click();
-        SelenideElement el2 = $(By.xpath("//a[@class = 'tile-cats__heading tile-cats__heading_type_center ng-star-inserted' and text() = ' Компьютеры ']")).should(Condition.visible);
-        el2.click();
+        basketPopUp.selectSection();
         SelenideElement good1 = $(By.xpath("//span[@class = 'goods-tile__title' and text() =' Компьютер Cobra I11.8.H1S2.165.101 ']")).should(Condition.visible);
         String text = good1.getText().trim();
         good1.click();

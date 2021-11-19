@@ -49,6 +49,6 @@ public class BasketPopUp {
         SelenideElement searchButton = $(By.xpath("//*[@class='button button_color_green button_size_medium search-form__submit ng-star-inserted']")).should(Condition.visible);
         searchButton.click();
         SelenideElement result = $(By.xpath("//*[@class='catalog-heading ng-star-inserted']")).should(Condition.appear);
-        assertTest.assertEquals(result.getText(), "«Asus»");
+        assertTest.assertEquals(result.getText(), "«Lg»");
     }
 }
