@@ -19,7 +19,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.nixsolutions.FinalTestMain"/>
+            <class name="com.nixsolutions.FinalAPI"/>
         </classes>
     </test> <!-- Test -->
     <test name="API test task and company">
@@ -30,7 +30,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.nixsolutions.FinalTestMain"/>
+            <class name="com.nixsolutions.FinalAPI"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

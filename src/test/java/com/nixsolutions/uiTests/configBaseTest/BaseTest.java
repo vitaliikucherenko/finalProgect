@@ -16,13 +16,13 @@ import static com.codeborne.selenide.Selenide.open;
 public class BaseTest {
     Browser browser = new Browser();
 
-    @BeforeMethod(groups = "authentication")
+    @BeforeMethod(groups = {"authentication", "validation"})
     public void start() {
         browser.getBrowserType();
         open("https://rozetka.com.ua/");
     }
 
-    @AfterMethod(groups = "authentication")
+    @AfterMethod(groups = {"authentication", "validation"})
     public void end(ITestResult result) {
         if (!result.isSuccess()) {
             TakeScreenshot takeScreenshot = new TakeScreenshot();

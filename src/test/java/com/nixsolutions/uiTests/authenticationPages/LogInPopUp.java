@@ -111,13 +111,13 @@ public class LogInPopUp {
         SelenideElement enterButton = $(By.xpath("//*[@class='button button--large button--green auth-modal__submit']"))
                 .should(Condition.enabled);
         enterButton.click();
-        SelenideElement firstNameValidation = $(By.xpath("//*[@class='form__row js-name validation_type_error']//p[@class='validation-message ng-star-inserted']"))
+        SelenideElement firstNameValidation = $(By.xpath("//*[@class='form__row validation_type_error']//p[@class='validation-message ng-star-inserted']"))
                 .should(Condition.visible);
         SelenideElement lastNameValidation = $(By.xpath("//*[@class='form__row js-surname validation_type_error']//p[@class='validation-message ng-star-inserted']"))
                 .should(Condition.visible);
-        SelenideElement phoneValidation = $(By.xpath("//*[@class='form__row js-phone validation_type_error']//p[@class='validation-message ng-star-inserted']"))
+        SelenideElement phoneValidation = $(By.xpath("//div[2]/div[2]/rz-user-identification/rz-register/div/form/fieldset/div[3]/form-error/p"))
                 .should(Condition.visible);
-        SelenideElement emailValidation = $(By.xpath("//*[@class='form__row js-email validation_type_error']//p[@class='validation-message ng-star-inserted']"))
+        SelenideElement emailValidation = $(By.xpath("//div[2]/div[2]/rz-user-identification/rz-register/div/form/fieldset/div[4]/form-error/p"))
                 .should(Condition.visible);
         SelenideElement passwordFieldValidation = $(By.id("registerUserPassword"))
                 .shouldHave(Condition.empty, Condition.visible);
