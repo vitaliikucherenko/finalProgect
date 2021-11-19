@@ -10,32 +10,32 @@ public class DataProviderClass {
 
     @DataProvider(name = "data-provider-new-user")
     public static Object[][] dataProviderNewUser() {
-        return new Object[][]{{"testvk111@mail.ru", "VkFirst11","2"}, {"testvk211@mail.ru", "Vk Last11","2"}};
+        return new Object[][]{{"testvk1112@mail.ru", "VkFirst112","2"}, {"testvk2112@mail.ru", "Vk Last112","2"}};
     }
 
     @DataProvider(name="data-provider-exist-user-name")
     public static Object[][] dataProviderExistUserName(){
-        return new Object[][]{{"newemail@mail.ru", "VkFirst11","2"}};
+        return new Object[][]{{"newemail@mail.ru", "VkFirst112","2"}};
     }
 
     @DataProvider(name="data-provider-exist-user-email")
     public static Object[][] dataProviderExistUserEmail(){
-        return new Object[][]{{"testvk211@mail.ru", "newName","2"}};
+        return new Object[][]{{"testvk2112@mail.ru", "newName","2"}};
     }
 
     @DataProvider(name = "data-provider-login-user")
     public static Object[][] dataProviderLoginUser() {
-        return new Object[][]{{"testvk111@mail.ru", "2"}, {"testvk211@mail.ru", "2"}};
+        return new Object[][]{{"testvk1112@mail.ru", "2"}, {"testvk2112@mail.ru", "2"}};
     }
 
     @DataProvider(name = "data-provider-incorrect-login-user")
     public static Object[][] dataProviderIncorrectLoginUser() {
-        return new Object[][]{{"testvk211@mail.ru", "wrong"}, {"testvk2_wrong@mail.ru", "2"}};
+        return new Object[][]{{"testvk2112@mail.ru", "wrong"}, {"testvk2_wrong@mail.ru", "2"}};
     }
 
     @DataProvider(name = "data-provider-user-with-task")
     public static Object[][] dataProviderCreateUserWithTask() {
-        return new Object[][]{{"testvk42@mail.ru", "First Last name2", "First task", "description",
+        return new Object[][]{{"testvk422@mail.ru", "First Last name22", "First task", "description",
                 "Second task", "description","19","20","hobby","address","name1","surname1",
                 "fathername1","cat","dog","parrot","cavy","hamster","squirrel","333 33 33","123456789012","m","04.10.1988","10.10.2020"}};
     }
