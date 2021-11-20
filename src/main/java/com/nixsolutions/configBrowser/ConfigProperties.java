@@ -15,7 +15,8 @@ public class ConfigProperties implements BrowserDao {
     @Override
     public void createChrome(BrowserDao browserDao) {
         Configuration.browser = "chrome";
-        Configuration.startMaximized = true;
+       // Configuration.startMaximized = true;
+        Configuration.browserSize="1920x1080";
         clearBrowserCookies();
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
@@ -27,6 +28,7 @@ public class ConfigProperties implements BrowserDao {
     public void createEdge(BrowserDao browserDao) {
         clearBrowserCookies();
         edgeOptions.setCapability("ms:inPrivate", true);
-        Configuration.startMaximized = true;
+        Configuration.browserSize="1920x1080";
+       // Configuration.startMaximized = true;
     }
 }

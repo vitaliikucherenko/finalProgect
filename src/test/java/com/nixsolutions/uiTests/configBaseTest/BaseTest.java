@@ -20,7 +20,6 @@ public class BaseTest {
     @BeforeMethod(groups = {"authentication", "validation"})
     public void start() {
         browser.getBrowserType();
-        Configuration.browserSize="1920x1080";
         open("https://rozetka.com.ua/");
     }
 
