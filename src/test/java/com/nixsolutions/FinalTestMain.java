@@ -15,7 +15,6 @@ public class FinalTestMain extends BaseTest {
     LogInPopUp logInPopUp = new LogInPopUp();
     BasketPopUp basketPopUp = new BasketPopUp();
 
-
     //UI
     @Test(dataProvider = "data-provider-login", dataProviderClass = DataProviderClass.class, groups = "authentication")
     public void verificationLogInFieldsIsEditable(String login, String password) {
