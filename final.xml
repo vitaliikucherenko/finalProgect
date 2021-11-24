@@ -12,25 +12,5 @@
             <class name="com.nixsolutions.FinalTestMain"/>
         </classes>
     </test> <!-- Test -->
-    <test name="API test users">
-        <groups>
-            <run>
-                <include name="api_user"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="com.nixsolutions.FinalAPI"/>
-        </classes>
-    </test> <!-- Test -->
-    <test name="API test task and company">
-        <groups>
-            <run>
-                <include name="api_user_with_task"/>
-                <include name="api_company"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="com.nixsolutions.FinalAPI"/>
-        </classes>
-    </test> <!-- Test -->
+
 </suite> <!-- Suite -->
