@@ -60,9 +60,9 @@ public class LogInPopUp {
 
     public void registerPopUp(String firstNameValue, String lastNameValue, String phoneValue, String emailValue, String passwordValue) {
         SoftAssert assertTest = new SoftAssert();
-        SelenideElement lohInButton = $(By.xpath("//*[@class='header__button ng-star-inserted']")).should(Condition.enabled);
+        SelenideElement lohInButton = $(By.xpath("//*[@class='header__button ng-star-inserted']")).should(Condition.visible);
         lohInButton.click();
-        SelenideElement registerLink = $(By.xpath("//*[@class='auth-modal__register-link button button--link ng-star-inserted']")).should(Condition.enabled);
+        SelenideElement registerLink = $(By.xpath("//*[@class='auth-modal__register-link button button--link ng-star-inserted']")).should(Condition.visible);
         registerLink.click();
         SelenideElement firstName = $(By.id("registerUserName")).should(Condition.visible);
         SelenideElement lastName = $(By.id("registerUserSurname")).should(Condition.visible);
