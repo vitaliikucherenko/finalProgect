@@ -75,7 +75,7 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>RELEASE</version>
+            <version>23.0.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -88,19 +88,15 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-
                     <encoding>UTF-8</encoding>
                     <argLine>
                         -Dfile.encoding=UTF-8
-
                     </argLine>
-
                     <suiteXmlFiles>
                         <suiteXmlFile>final.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
