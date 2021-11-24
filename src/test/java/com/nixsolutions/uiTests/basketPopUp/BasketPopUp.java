@@ -26,7 +26,7 @@ public class BasketPopUp {
         SelenideElement remove = $(By.xpath("//button[@class='button button--medium button--with-icon button--link context-menu-actions__button']")).should(Condition.visible);
         remove.click();
         SelenideElement message = $(By.xpath("//h4[@class='cart-dummy__heading']")).should(Condition.visible);
-        assertTest.assertEquals("Корзина пуста", message.getText());
+        assertTest.assertEquals( message.getText(), "Корзина пуста");
     }
 
     public void orderForm() {
@@ -34,21 +34,5 @@ public class BasketPopUp {
         zakazOrderButton.click();
         SelenideElement title = $(By.xpath("//*[@class = 'checkout-heading ng-star-inserted']")).should(Condition.visible);
         assertTest.assertEquals(title.getText(), "Оформление заказа");
-    }
-
-    public void selectSection(){
-        SelenideElement el1 = $(By.xpath("//a[@class = 'menu-categories__link' and text() = 'Ноутбуки и компьютеры']")).should(Condition.enabled);
-        el1.click();
-        SelenideElement el2 = $(By.xpath("//a[@class = 'tile-cats__heading tile-cats__heading_type_center ng-star-inserted' and text() = ' Компьютеры ']")).should(Condition.enabled);
-        el2.click();
-    }
-
-    public void search(String searchData){
-        SelenideElement searchField = $(By.xpath("//*[@class='search-form__input ng-untouched ng-pristine ng-valid']")).should(Condition.enabled);
-        searchField.sendKeys(searchData);
-        SelenideElement searchButton = $(By.xpath("//*[@class='button button_color_green button_size_medium search-form__submit ng-star-inserted']")).should(Condition.visible);
-        searchButton.click();
-        SelenideElement result = $(By.xpath("//*[@class='catalog-heading ng-star-inserted']")).should(Condition.appear);
-        assertTest.assertEquals(result.getText(), "«Lg»");
     }
 }
