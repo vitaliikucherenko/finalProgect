@@ -12,7 +12,7 @@ public class BasketPopUp {
 
     public void addToBasket(String text) {
         SelenideElement addGood = $(By.xpath("//button[@class = 'buy-button button button_with_icon button_color_green button_size_large ng-star-inserted']"))
-                .should(Condition.focused, Condition.visible);
+                .should(Condition.selected, Condition.visible);
         addGood.click();
         assertTest.assertEquals($(By.className("modal__heading")).should(Condition.appear).getText(), "Корзина");
         SelenideElement goodIsAdded = $(By.xpath("//a[@class = 'cart-product__title']"));
